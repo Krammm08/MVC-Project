@@ -23,8 +23,8 @@ This repository contains a by-pair practice activity for **Applications Developm
 | `stage` | User validation testing |
 | `test` | Quality Assurance environment |
 | `dev` | Active feature integration branch |
-| `features/f1-monterey` | Reine's portfolio branch |
-| `features/f2-sevilla` | Mark Elijah's portfolio branch |
+| `f1-monterey` | Reine's portfolio branch |
+| `f2-sevilla` | Mark Elijah's portfolio branch |
 ---
 
 ## How to Clone & Run
