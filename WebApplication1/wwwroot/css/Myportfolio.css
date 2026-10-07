@@ -1,0 +1,61 @@
+h1{
+    font-size: 2.5rem;
+}
+.grid-container{
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff; 
+    height: 100%;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+.name{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.left-container{
+    background-color: #1E1E1F;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 0px;
+    border-radius: 20px;
+    width: 40%
+}
+.right-container{
+    margin-left: 0px;
+    padding: 20px;
+    background-color: #1E1E1F;
+    margin: 10px;
+    border-radius: 20px;  
+    width: 200%  
+    
+}
+.description{
+    font-size: 1.rem;
+    text-align: center;
+    background-color: #a3a3a334;
+    padding: 10px;
+    border-radius: 8px;
+}
+.header{
+    font-size: 1.6rem;
+    
+}
