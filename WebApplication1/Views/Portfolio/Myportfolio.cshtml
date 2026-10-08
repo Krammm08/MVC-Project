@@ -1,18 +1,10 @@
 @model WebApplication1.Models.Portfolio
 @{
-    Layout = null;
+    ViewData["Title"] = "My Portfolio";
 }
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/Myportfolio.css" />
-    <title>Document</title>
-</head>
 
-<body>
+<div class="portfolio-page">
     <div class="grid-container">
         <div class="left-container">
             <img src="@Model.profileImage" alt="Profile Image" class="profile-image" />
@@ -30,7 +22,7 @@
                 }
             </ul>
             <hr />
-            <H1 class="header">Tech Stack:</H1>
+            <h1 class="header">Tech Stack:</h1>
             <div class="tech">
                 <ul class="tech-stack">
                     @foreach (var tech in Model.techStack)
@@ -50,35 +42,34 @@
                     }
                 </ul>
             </div>
-            
         </div>
         <div class="right-container">
             <h1 class="header">About Me:</h1>
             <p class="aboutMe">@Model.aboutMe</p>
-            
-            <H1 class="header">Education:</H1>
+
+            <h1 class="header">Education:</h1>
             <ul>
                 @foreach (var education in Model.education)
                 {
                     <li>@education</li>
                 }
             </ul>
-            <H1 class="header">Achievements:</H1>
+            <h1 class="header">Achievements:</h1>
             <ul>
                 @foreach (var achievement in Model.achievements)
                 {
                     <li>@achievement</li>
                 }
             </ul>
-            <H1 class="header">Projects: </H1>
+            <h1 class="header">Projects:</h1>
             <ul>
                 @foreach (var project in Model.projects)
                 {
-                    <li><a href="@project.Value">@project.Key</a></li>
+                    <li><a href="@project.Value" class="project-link">@project.Key</a></li>
                 }
             </ul>
 
-            <H1 class="header">Hobbies: </H1>
+            <h1 class="header">Hobbies:</h1>
             <ul>
                 @foreach (var hobby in Model.hobbies)
                 {
@@ -87,6 +78,4 @@
             </ul>
         </div>
     </div>
-</body>
-
-</html>
+</div>

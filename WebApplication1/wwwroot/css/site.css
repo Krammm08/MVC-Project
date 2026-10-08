@@ -18,7 +18,18 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > .container-fluid {
+  flex: 1 0 auto;
+}
+
+body > .footer {
+  flex-shrink: 0;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
