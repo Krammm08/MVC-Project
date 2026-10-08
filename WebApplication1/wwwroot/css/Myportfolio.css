@@ -13,7 +13,6 @@ html{
     margin: 0;
     padding: 0;
     background-color: #121212;
-    color: #ffffff; 
     height: 100%;
 
 }
@@ -22,12 +21,21 @@ body{
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
+    color: #ffffff; 
+    background-color: #121212;
 }
 .name{
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.tagline{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 .left-container{
     background-color: #1E1E1F;
@@ -56,6 +64,75 @@ body{
     border-radius: 8px;
 }
 .header{
-    font-size: 1.6rem;
-    
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: hwb(0 100% 0%)f;
+}
+img{
+    width: 22px;
+    height: 22px;
+}
+.profile-image{
+    border: 3px solid #555;
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    margin-bottom: 20px;
+    align-self: center;
+}
+.left-container li{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    list-style: none;
+}
+.left-container ul{
+    padding-left: 0;
+    margin: 0;  
+}
+.social-media{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 0;
+    margin: 0;
+    justify-content: center;
+}
+.socials{
+    margin-top: auto;
+}
+.tech{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 0;
+    margin: 0;
+    justify-content: center;
+}
+.tech-stack{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+    margin: 0;
+    justify-content: center;
+}
+.techImage{
+    width: 25px;
+    height: 25px;
+}
+.left-container hr{
+    border: 1px solid #3a3a3a;
+    margin: 12px 0;
+}
+.aboutMe{
+    background-color: #a3a3a334;
+    border-left: 4px solid #555;
+    padding: 16px;
+    border-radius: 8px;
 }

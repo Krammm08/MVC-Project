@@ -15,57 +15,70 @@
 <body>
     <div class="grid-container">
         <div class="left-container">
-            <img src="~/image/Mark.png" alt="Profile Image" />
+            <img src="@Model.profileImage" alt="Profile Image" class="profile-image" />
             <p class="name">@Model.firstName @Model.lastName</p>
             <p class="description">Computer Science Student</p>
-            <h1 class="header">Contacts:</h1>
+            <p class="tagline">"CS student. Gamer. Data enthusiast."</p>
+            <hr />
             <ul>
-                @for (int i = 0; i < Math.Min(Model.contacts.Count, Model.contactsImage.Count); i++)
+                @for (int i = 0; i < Math.Min(Model.information.Count, Model.informationImage.Count); i++)
                 {
-                    <img src="@Model.contactsImage[i]" alt="Contact" />
-                    @Model.contacts[i]
+                    <li>
+                        <img src="@Model.informationImage[i]" alt="Information" />
+                        @Model.information[i]
+                    </li>
                 }
             </ul>
-            <h1>Social Media:</h1>
-            <ul>
-                @for (int i = 0; i < Math.Min(Model.socials.Count, Model.socialsImage.Count); i++)
-                {
-                    <img src="@Model.socialsImage[i]" alt="Social Media" />
-                    <a href="@Model.socials.Values.ElementAt(i)">@Model.socials.Keys.ElementAt(i)</a>
-                }
-            </ul>
+            <hr />
+            <H1 class="header">Tech Stack:</H1>
+            <div class="tech">
+                <ul class="tech-stack">
+                    @foreach (var tech in Model.techStack)
+                    {
+                        <img src="@tech" alt="techstack" class="techImage" />
+                    }
+                </ul>
+            </div>
+            <hr />
+            <div class="socials">
+                <ul class="social-media">
+                    @for (int i = 0; i < Math.Min(Model.socials.Count, Model.socialsImage.Count); i++)
+                    {
+                        <a href="@Model.socials[i]">
+                            <img src="@Model.socialsImage[i]" alt="Social Media" />
+                        </a>
+                    }
+                </ul>
+            </div>
+            
         </div>
         <div class="right-container">
-            <p>@Model.aboutMe</p>
-            <H1>Education:</H1>
+            <h1 class="header">About Me:</h1>
+            <p class="aboutMe">@Model.aboutMe</p>
+            
+            <H1 class="header">Education:</H1>
             <ul>
                 @foreach (var education in Model.education)
                 {
                     <li>@education</li>
                 }
             </ul>
-            <H1>Achievements:</H1>
+            <H1 class="header">Achievements:</H1>
             <ul>
                 @foreach (var achievement in Model.achievements)
                 {
                     <li>@achievement</li>
                 }
             </ul>
-            <H1>Projects: </H1>
+            <H1 class="header">Projects: </H1>
             <ul>
                 @foreach (var project in Model.projects)
                 {
                     <li><a href="@project.Value">@project.Key</a></li>
                 }
             </ul>
-            <H1>Tech Stack:</H1>
-            <ul>
-                @foreach (var tech in Model.techStack)
-                {
-                    <li>@tech</li>
-                }
-            </ul>
-            <H1>Hobbies: </H1>
+
+            <H1 class="header">Hobbies: </H1>
             <ul>
                 @foreach (var hobby in Model.hobbies)
                 {

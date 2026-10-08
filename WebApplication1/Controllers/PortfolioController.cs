@@ -10,34 +10,36 @@ public class PortfolioController : Controller
     {
         var portfolio = new Portfolio
         {
-            profileImage = "~/image/Mark.png",
+            profileImage = "/image/Mark.png",
             firstName = "Mark Elijah",
             lastName = "Sevilla",
             dateOfBirth = new DateOnly(2005, 8, 6),
-            contactsImage = new List<string>
+            informationImage = new List<string>
             {
-                "~/image/phone.png",
-                "~/image/mail.png"
+                "/image/location.png",
+                "/image/calendar.png",
+                "/image/phone.png",
+                "/image/mail.png"
             },
-            contacts = new List<string>
+            information = new List<string>
             {
-                 "0992-902-5256", "markelijahsevilla@gmail.com"
+                 "Manila, Philippines", "August 6, 2005", "0992-902-5256", "markelijahsevilla@gmail.com"
             },
             socialsImage = new List<string>
             {
-                "~/image/facebook.png",
-                "~/image/instagram.png",
-                "~/image/linkedin.png",
-                "~/image/github.png",
-                "~/image/discord.png"
+                "/image/facebook.png",
+                "/image/instagram.png",
+                "/image/linkedin.png",
+                "/image/github.png",
+                "/image/discord.png"
             },
-            socials = new Dictionary<string, string>
+            socials = new List<string>
             {
-                {"Facebook", "https://www.facebook.com/markelijah.sevilla/"},
-                {"Instagram", "https://www.instagram.com/krammm_08/"},
-                {"LinkedIn", "https://www.linkedin.com/in/mark-elijah-sevilla-3b6063348/?isSelfProfile=true"},
-                {"GitHub", "https://github.com/Krammm08"},
-                {"Discord", "https://discord.com/users/748107424149536801"}
+                "https://www.facebook.com/markelijah.sevilla/",
+                "https://www.instagram.com/krammm_08/",
+                "https://www.linkedin.com/in/mark-elijah-sevilla-3b6063348/?isSelfProfile=true",
+                "https://github.com/Krammm08",
+                "https://discord.com/users/748107424149536801"
             },
             aboutMe = "Hi, I'm Mark Sevilla, a Computer Science student at the Polytechnic University of the Philippines. I'm  deeply passionate about programming and constantly exploring new facets of technology. As an avid gamer, I dont just play, I analyze. I'm dedicated to learning how to extract and interpret game data, using statistical analysis to uncover insights, solve complex problems, and determing the most efficient outcomes.",
             education = new List<string>
@@ -62,7 +64,7 @@ public class PortfolioController : Controller
             },
             techStack = new List<string>
             {
-                "C", "Java", "HTML", "CSS", "JavaScript", "SQL"
+                "/image/c.png", "/image/java.png", "/image/html.png", "/image/css.png", "/image/javascript.png", "/image/sql.png"
             },
             hobbies = new List<string>
             {
