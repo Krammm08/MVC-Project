@@ -11,8 +11,8 @@ This repository contains a by-pair practice activity for **Applications Developm
 ## Members
 | Name | GitHub username | Feature branch |
 | :--- | :--- | :--- |
-| Reine Arabelle L. Monterey | [@desoliveu](https://github.com/desoliveu) | f1-monterey | 
-| Mark Elijah R. Sevilla | [@Krammm08](https://github.com/Krammm08) | f2-sevilla |
+| Reine Arabelle L. Monterey | [@desoliveu](https://github.com/desoliveu) | features/f1-monterey | 
+| Mark Elijah R. Sevilla | [@Krammm08](https://github.com/Krammm08) | features/f2-sevilla |
 --- 
 
 ## Branches
@@ -23,8 +23,8 @@ This repository contains a by-pair practice activity for **Applications Developm
 | `stage` | User validation testing |
 | `test` | Quality Assurance environment |
 | `dev` | Active feature integration branch |
-| `f1-monterey` | Reine's portfolio branch |
-| `f2-sevilla` | Mark Elijah's portfolio branch |
+| `features/f1-monterey` | Reine's portfolio branch |
+| `features/f2-sevilla` | Mark Elijah's portfolio branch |
 ---
 
 ## How to Clone & Run
