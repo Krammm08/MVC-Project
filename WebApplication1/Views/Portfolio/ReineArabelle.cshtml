@@ -77,7 +77,7 @@
             @foreach (var cert in Model.Certifications)
             {
                 <li class="py-1">
-                    <strong>@cert.Name</strong> — <span style="color: var(--text-muted);">@cert.Issuer</span> (@cert.MonthYear)
+                    <strong>@cert.Name</strong> — <span class="text-light">@cert.Issuer</span> (@cert.MonthYear)
                 </li>
             }
         </ul>
@@ -87,7 +87,7 @@
     <section class="mb-5">
         <h2 class="section-heading mb-3">./SKILLS-and-TOOLS</h2>
         <div class="mb-3">
-            <h4 class="h6 mb-2" style="color: var(--text-muted);">Technical Stack</h4>
+            <h4 class="h6 mb-2 fw-bold text-light">Tech Stack</h4>
             <div class="d-flex flex-wrap gap-2">
                 @foreach (var tech in Model.TechStack)
                 {
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div>
-            <h4 class="h6 mb-2" style="color: var(--text-muted);">Design Tools</h4>
+            <h4 class="h6 mb-2 fw-bold text-light">Design Tools</h4>
             <div class="d-flex flex-wrap gap-2">
                 @foreach (var design in Model.DesignStack)
                 {

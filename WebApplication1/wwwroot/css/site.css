@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-    --bg-plum: #956781;
+    --bg-plum: #2d1724;
     --bg-light: #edeaeb;
     --border-rose: #b39494;
     --text-accent: #b66794;
@@ -9,44 +9,41 @@
     --text-light: #edeaeb;
 }
 
+/* Base Layout & Theme */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-light);
     color: #212529;
 }
 
-body.portfolio-body {
-    background-color: var(--bg-plum) !important;
-    color: var(--text-light) !important;
-}
+    body.portfolio-body {
+        background-color: var(--bg-plum) !important;
+        color: var(--text-light) !important;
+    }
 
-/* Default BG
-body {
-    background-color: var(--bg-light);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #956781;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
+        /* Standardize #edeaeb for text labels, titles, issuers, and social icons */
+        body.portfolio-body,
+        body.portfolio-body .text-light,
+        body.portfolio-body .text-muted,
+        body.portfolio-body h4,
+        body.portfolio-body .h6,
+        body.portfolio-body li span,
+        .socmed-links .social-btn,
+        .socmed-links a {
+            color: #edeaeb !important;
+            font-size: 1.25rem;
+            text-decoration: none;
+        }
 
-.hero-email {
+/* Linear Gradient for Name & Section Headings */
+.gradient-text,
+.section-heading {
     font-family: 'Fira Code', 'Kira', monospace !important;
     font-weight: 700 !important;
-    background: linear-gradient(135deg, #dcaac7 0%, #b66794 50%, #b3a5ca 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, #dcaac7 0%, #b66794 50%, #b3a5ca 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     display: inline-block;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}
-
-.hero-email:hover,
-.hero-email:hover * {
-    background: none !important;
-    -webkit-text-fill-color: #000000 !important;
-    color: #000000 !important;
-    text-decoration: underline;
 }
 
 .section-heading {
@@ -56,52 +53,50 @@ body {
     width: 100%;
 }
 
-.custom-pink-nav, .portfolio-hero, navbar, .navbar {
+/* Hero Email: Static #82566f -> Hover Linear Gradient */
+.hero-email {
+    font-family: 'Fira Code', 'Kira', monospace !important;
+    font-weight: 700 !important;
+    color: #82566f !important;
+    -webkit-text-fill-color: #82566f !important;
+    background: none !important;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+    .hero-email:hover,
+    .hero-email:hover * {
+        background: linear-gradient(135deg, #dcaac7 0%, #b66794 50%, #b3a5ca 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        text-decoration: underline;
+    }
+
+/* Navigation */
+.custom-pink-nav, navbar, .navbar {
     background-color: var(--bg-light) !important;
     border-radius: 0 !important;
     border-bottom: 1px solid var(--border-rose);
 }
 
-/* Dropdown */
-details.resume-dropdown {
-    border-bottom: 1px dashed var(--border-rose) !important;
-}
-
-summary {
-    cursor: pointer;
-}
-
-body.portfolio-body footer {
-    border-top: 1px solid rgba(179, 148, 148, 0.4);
-}
-
-    body.portfolio-body footer,
-    body.portfolio-body footer a,
-    body.portfolio-body footer span,
-    body.portfolio-body footer .text-muted {
-        color: #edeaeb !important;
-    }
-
-        body.portfolio-body footer a:hover {
-            color: #f3cfd2 !important;
-        }
-
-/* Base Footer Styling (Light Background Pages) */
+/* Footer Base & Portfolio Override */
 footer {
     margin-top: auto !important;
-    text-align: left !important;
-    color: #4a3e3e !important;
     border-top: 1px solid var(--border-rose);
     padding-top: 1rem;
 }
 
-    footer a, footer span, footer .text-muted {
-        color: #2d1724 !important; /* Dark plum for clear contrast on #edeaeb */
+    footer, footer a, footer span, footer .text-muted {
+        color: #2d1724 !important;
         font-weight: 600;
         text-decoration: none;
     }
 
-        footer a:hover {
-            color: var(--text-accent) !important; /* Distinct hover color */
-            text-decoration: underline;
-        }
+body.portfolio-body footer,
+body.portfolio-body footer a,
+body.portfolio-body footer span,
+body.portfolio-body footer .text-muted {
+    color: #edeaeb !important;
+    border-top-color: rgba(179, 148, 148, 0.4);
+}
