@@ -11,7 +11,7 @@ This repository contains a by-pair practice activity for **Applications Developm
 ## Members
 | Name | GitHub username | Feature branch |
 | :--- | :--- | :--- |
-| Reine Arabelle L. Monterey | [@desoliveu](https://github.com/desoliveu) | f1-monterey | 
+| Reine Arabelle L. Monterey | [@reindezvvous](https://github.com/reindezvvous) | f1-monterey | 
 | Mark Elijah R. Sevilla | [@Krammm08](https://github.com/Krammm08) | f2-sevilla |
 --- 
 
@@ -27,7 +27,7 @@ This repository contains a by-pair practice activity for **Applications Developm
 | `f2-sevilla` | Mark Elijah's portfolio branch |
 ---
 
-## How to Clone & Run
-1. Clone the repository: `git clone https://github.com/desoliveu/MVC-Project.git`
+## How to Run
+1. Clone the repository: `git clone https://github.com/Krammm08/MVC-Project.git`
 2. Open the `.sln` or `.slnx` file inside `WebApplication1` in Visual Studio Code or Visual Studio Community
 3. Press the green Run button or hit F5
