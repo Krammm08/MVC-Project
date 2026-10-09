@@ -5,7 +5,7 @@
     ViewData["BodyClass"] = "portfolio-body"; // deep plum
 }
 
-<div class="portfolio-container container py-5">
+<div class="portfolio-container container py-4">
     <!-- HEADER -->
     <header class="mb-5">
         <h1 class="gradient-text display-5 mb-1">@Model.Name</h1>
@@ -28,33 +28,48 @@
     <!-- PROJECTS -->
     <section class="mb-5">
         <h2 class="section-heading mb-3">./PROJECTS</h2>
+
         @foreach (var project in Model.Projects)
         {
-            <details class="resume-dropdown mb-3">
-                <summary>
-                    <span class="resume-item-title fw-semibold">@project.Title</span>
-                </summary>
-                <div class="dropdown-content">
-                    <p class="mb-2">@project.Description</p>
-                    @if (!string.IsNullOrEmpty(project.Goal))
-                    {
+            if (project.Title == "Panatiko")
+            {
+                <details class="resume-dropdown mb-3">
+                    <summary><span class="fw-semibold">@project.Title</span></summary>
+                    <div class="dropdown-content">
+                        <p class="mb-2">@project.Description</p>
                         <p class="mb-2"><strong>Goal:</strong> @project.Goal</p>
-                    }
-                    @if (project.Details.Any())
-                    {
                         <ul class="mb-3 ps-3">
                             @foreach (var detail in project.Details)
                             {
                                 <li>@detail</li>
                             }
                         </ul>
-                    }
-                    <a href="@project.Repo" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm mt-1">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> @project.ButtonText
-                    </a>
-                </div>
-            </details>
+                        <a href="@project.Repo" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm">@project.ButtonText</a>
+                    </div>
+                </details>
+            }
         }
+
+        <!-- BULLETED ACADEMIC PROJECTS -->
+        <ul class="ps-3 mb-0">
+            @foreach (var project in Model.Projects)
+            {
+                if (project.Title != "Panatiko")
+                {
+                    <li class="py-1">
+                        @if (!string.IsNullOrEmpty(project.Repo))
+                        {
+                            <a href="@project.Repo" target="_blank" rel="noopener noreferrer" class="fw-bold text-decoration-underline" style="color: var(--text-light);">@project.Title</a>
+                        }
+                        else
+                        {
+                            <strong>@project.Title</strong>
+                        }
+                        — <span style="color: var(--text-muted);">@project.Description</span>
+                    </li>
+                }
+            }
+        </ul>
     </section>
 
     <!-- EXPERIENCE -->
@@ -64,7 +79,7 @@
             @foreach (var exp in Model.Experiences)
             {
                 <li class="py-1">
-                    <strong>@exp.Role</strong> — <span style="color: var(--text-muted);">@exp.Organization</span> (@exp.Period)
+                    <strong>@exp.Role</strong> — <span class="text-light">@exp.Organization</span> (@exp.Period)
                 </li>
             }
         </ul>
@@ -85,26 +100,13 @@
 
     <!-- SKILLS & TOOLS -->
     <section class="mb-5">
-        <h2 class="section-heading mb-3">./SKILLS-and-TOOLS</h2>
-        <div class="mb-3">
-            <h4 class="h6 mb-2 fw-bold text-light">Tech Stack</h4>
-            <div class="d-flex flex-wrap gap-2">
-                @foreach (var tech in Model.TechStack)
-                {
-                    <span class="@tech.ToolClass"><i class="bi @tech.IconClass me-1"></i> @tech.Name</span>
-                }
-            </div>
-        </div>
-        <div>
-            <h4 class="h6 mb-2 fw-bold text-light">Design Tools</h4>
-            <div class="d-flex flex-wrap gap-2">
-                @foreach (var design in Model.DesignStack)
-                {
-                    <span class="@design.ToolClass"><i class="bi @design.IconClass me-1"></i> @design.Name</span>
-                }
-            </div>
-        </div>
-    </section>
+    <h2 class="section-heading mb-3">./SKILLS & TOOLS</h2>
+
+    <div class="text-light fs-6">
+        <p class="mb-2"><strong>Tech Stack:</strong>   HTML &nbsp;&nbsp;&nbsp; CSS &nbsp;&nbsp;&nbsp; JavaScript &nbsp;&nbsp;&nbsp; SQL &nbsp;&nbsp;&nbsp; Git / GitHub</p>
+        <p class="mb-0"><strong>Design Tools:</strong> Figma &nbsp;&nbsp;&nbsp; Canva &nbsp;&nbsp;&nbsp; Adobe Illustrator &nbsp;&nbsp;&nbsp; UI/UX Design &nbsp;&nbsp;&nbsp; Game Design</p>
+    </div>
+</section>
 
     <!-- INTERESTS -->
     <section class="mb-5">

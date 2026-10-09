@@ -31,7 +31,11 @@ namespace WebApplication1.Controllers;
                         Repo = "https://itch.io/jam/filipino-horror-game-jam-2026/rate/5101029",
                         ButtonText = "View on Itch.io",
                         ButtonClass = "btn-danger"
-                    }
+                    },
+                    new Project { Title = "Arbitrary Image Scoring", Description = "Design and Analysis of Algorithms (May 2026)" },
+                    new Project { Title = "Scholarship Form", Description = "Information Management (June 2026)", Repo = ""},
+                    new Project { Title = "Four Fundamental Spaces Finder", Description = "Linear Algebra (Jan 2026)" },
+                    new Project { Title = "Pila Room Reserb", Description = "OOP (Jan 2026)" },
                 },
 
                 // EXPERIENCE 
@@ -52,20 +56,20 @@ namespace WebApplication1.Controllers;
                 // SKILLS & TOOLS
                 TechStack = new List<ToolItem>
                 {
-                    new ToolItem { Name = "HTML", IconClass = "bi-filetype-html", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "CSS", IconClass = "bi-filetype-css", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "JavaScript", IconClass = "bi-filetype-js", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "SQL", IconClass = "bi-database", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "Git / GitHub", IconClass = "bi-git", ToolClass = "badge-custom" }
+                    new ToolItem { Name = "HTML" },
+                    new ToolItem { Name = "CSS" },
+                    new ToolItem { Name = "JavaScript" },
+                    new ToolItem { Name = "SQL" },
+                    new ToolItem { Name = "Git / GitHub" }
                 },
 
                 DesignStack = new List<ToolItem>
                 {
-                    new ToolItem { Name = "Figma", IconClass = "bi-vector-pen", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "Canva", IconClass = "bi-aspect-ratio", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "Adobe Illustrator", IconClass = "bi-brush", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "UI/UX Design", IconClass = "bi-layout-wpt", ToolClass = "badge-custom" },
-                    new ToolItem { Name = "Game Design", IconClass = "bi-controller", ToolClass = "badge-custom" }
+                    new ToolItem { Name = "Figma" },
+                    new ToolItem { Name = "Canva" },
+                    new ToolItem { Name = "Adobe Illustrator" },
+                    new ToolItem { Name = "Aseprite" },
+                    new ToolItem { Name = "Clip Studio Art" }
                 },
 
                 // INTERESTS

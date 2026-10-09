@@ -9,40 +9,37 @@
     --text-light: #edeaeb;
 }
 
-/* Base Layout & Theme */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-light);
     color: #212529;
 }
 
-    body.portfolio-body {
-        background-color: var(--bg-plum) !important;
-        color: var(--text-light) !important;
-    }
+.portfolio-hero,
+.hero-section {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
-        /* Standardize #edeaeb for text labels, titles, issuers, and social icons */
-        body.portfolio-body,
-        body.portfolio-body .text-light,
-        body.portfolio-body .text-muted,
-        body.portfolio-body h4,
-        body.portfolio-body .h6,
-        body.portfolio-body li span,
-        .socmed-links .social-btn,
-        .socmed-links a {
-            color: #edeaeb !important;
-            font-size: 1.25rem;
-            text-decoration: none;
-        }
+body.portfolio-body {
+    background-color: var(--bg-plum);
+    color: var(--text-light);
+}
 
-/* Linear Gradient for Name & Section Headings */
+body.portfolio-body a,
+    .socmed-links a {
+        color: var(--text-light);
+        text-decoration: none;
+}
+
 .gradient-text,
 .section-heading {
-    font-family: 'Fira Code', 'Kira', monospace !important;
-    font-weight: 700 !important;
-    background: linear-gradient(135deg, #dcaac7 0%, #b66794 50%, #b3a5ca 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    background: linear-gradient(135deg, #dcaac7, #b66794, #b3a5ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: inline-block;
 }
 
@@ -53,50 +50,56 @@ body {
     width: 100%;
 }
 
-/* Hero Email: Static #82566f -> Hover Linear Gradient */
-.hero-email {
-    font-family: 'Fira Code', 'Kira', monospace !important;
-    font-weight: 700 !important;
-    color: #82566f !important;
-    -webkit-text-fill-color: #82566f !important;
-    background: none !important;
-    display: inline-block;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}
-
-    .hero-email:hover,
-    .hero-email:hover * {
-        background: linear-gradient(135deg, #dcaac7 0%, #b66794 50%, #b3a5ca 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        text-decoration: underline;
-    }
-
-/* Navigation */
-.custom-pink-nav, navbar, .navbar {
+.custom-pink-nav,
+.navbar {
     background-color: var(--bg-light) !important;
-    border-radius: 0 !important;
     border-bottom: 1px solid var(--border-rose);
 }
 
-/* Footer Base & Portfolio Override */
-footer {
-    margin-top: auto !important;
-    border-top: 1px solid var(--border-rose);
-    padding-top: 1rem;
+.navbar * {
+    color: #212529 !important;
+} 
+
+.hero-email {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    color: #82566f;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-    footer, footer a, footer span, footer .text-muted {
-        color: #2d1724 !important;
-        font-weight: 600;
+.hero-email:hover {
+        color: var(--text-accent);
+        text-decoration: underline;
+}
+
+.btn-itchio {
+    background-color: #fa5c5c;
+    border: 1px solid #fa5c5c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-itchio:hover {
+        background-color: #e04848;
+        border-color: #e04848;
+        color: #ffffff;
+}
+
+footer {
+    margin-top: auto;
+    border-top: 1px solid var(--border-rose);
+    padding-top: 1rem;
+    color: #2d1724;
+    font-weight: 600;
+}
+
+    footer a {
+        color: inherit;
         text-decoration: none;
     }
 
 body.portfolio-body footer,
-body.portfolio-body footer a,
-body.portfolio-body footer span,
-body.portfolio-body footer .text-muted {
-    color: #edeaeb !important;
-    border-top-color: rgba(179, 148, 148, 0.4);
+body.portfolio-body footer a {
+    color: var(--text-light) !important;
 }
