@@ -28,6 +28,6 @@ This repository contains a by-pair practice activity for **Applications Developm
 ---
 
 ## How to Clone & Run
-1. Clone the repository: `git clone https://github.com/Krammm08/MVC-Project.git`
+1. Clone the repository: `git clone https://github.com/desoliveu/MVC-Project.git`
 2. Open the `.sln` or `.slnx` file inside `WebApplication1` in Visual Studio Code or Visual Studio Community
 3. Press the green Run button or hit F5
