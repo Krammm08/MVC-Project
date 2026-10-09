@@ -6,7 +6,7 @@ namespace WebApplication1.Controllers;
 
 public class PortfolioController : Controller
 {
-    public IActionResult MyPortfolio()
+    public IActionResult Elijah()
     {
         var portfolio = new Portfolio
         {
@@ -25,28 +25,21 @@ public class PortfolioController : Controller
             {
                  "Manila, Philippines", "August 6, 2005", "0992-902-5256", "markelijahsevilla@gmail.com"
             },
-            socialsImage = new List<string>
+            techStack = new List<string>
             {
-                "/image/facebook.png",
-                "/image/instagram.png",
-                "/image/linkedin.png",
-                "/image/github.png",
-                "/image/discord.png"
+                "/image/c.png", "/image/java.png", "/image/html.png", "/image/css.png", "/image/javascript.png", "/image/sql.png"
             },
-            socials = new List<string>
+            socials = new Dictionary<string, string>
             {
-                "https://www.facebook.com/markelijah.sevilla/",
-                "https://www.instagram.com/krammm_08/",
-                "https://www.linkedin.com/in/mark-elijah-sevilla-3b6063348/?isSelfProfile=true",
-                "https://github.com/Krammm08",
-                "https://discord.com/users/748107424149536801"
+                { "/image/facebook.png", "https://www.facebook.com/markelijah.sevilla/" },
+                { "/image/instagram.png", "https://www.instagram.com/krammm_08/" },
+                { "/image/linkedin.png", "https://www.linkedin.com/in/mark-elijah-sevilla-3b6063348/?isSelfProfile=true" },
+                { "/image/github.png", "https://github.com/Krammm08" },
+                { "/image/discord.png", "https://discord.com/users/748107424149536801" }
             },
             aboutMe = "Hi, I'm Mark Sevilla, a Computer Science student at the Polytechnic University of the Philippines. I'm  deeply passionate about programming and constantly exploring new facets of technology. As an avid gamer, I dont just play, I analyze. I'm dedicated to learning how to extract and interpret game data, using statistical analysis to uncover insights, solve complex problems, and determing the most efficient outcomes.",
             education = new List<string>
             {
-                "Aurora A. Quezon Elementary School - Elementary (2012 - 2016)",
-                "Justo Lukban Elementary School - Elementary (2016 - 2018)",
-                "Manuel G. Araullo High School - Junior High School (2018 - 2022)",
                 "Polytechnic University of the Philippines - Senior High School (2022 - 2024)",
                 "Polytechnic University of the Philippines - Bachelor of Science in Computer Science (2024 - Present)"
             },
@@ -62,10 +55,14 @@ public class PortfolioController : Controller
                 {"Eigen-Stuff-Calculator", "https://github.com/Krammm08/eigen-stuff-calculator"}
 
             },
-            techStack = new List<string>
+            projectDescription = new List<string>
             {
-                "/image/c.png", "/image/java.png", "/image/html.png", "/image/css.png", "/image/javascript.png", "/image/sql.png"
+                " - A clinic management system designed to streamline pet records, veterinary appointments, and patient care.",
+                " - A modern digital banking platform designed for seamless financial management and secure transactions.",
+                " - An end-to-end recruitment portal with a multi-step job application and candidate review queue.",
+                " - An interactive 3D matrix transformation and eigenvalue visualizer for linear algebra."
             },
+
             hobbies = new List<string>
             {
                 "Playing video games", "Watching movies", "Running", "Listening to music"

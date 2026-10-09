@@ -1,6 +1,7 @@
 @model WebApplication1.Models.Portfolio
 @{
-    ViewData["Title"] = "My Portfolio";
+    ViewData["Title"] = "Portfolio";
+    ViewData["BodyClass"] = "portfolio-body";
 }
 
 
@@ -34,10 +35,10 @@
             <hr />
             <div class="socials">
                 <ul class="social-media">
-                    @for (int i = 0; i < Math.Min(Model.socials.Count, Model.socialsImage.Count); i++)
+                    @foreach (var social in Model.socials)
                     {
-                        <a href="@Model.socials[i]">
-                            <img src="@Model.socialsImage[i]" alt="Social Media" />
+                        <a href="@social.Value">
+                            <img src="@social.Key" alt="Social Media" />
                         </a>
                     }
                 </ul>
@@ -63,9 +64,13 @@
             </ul>
             <h1 class="header">Projects:</h1>
             <ul>
-                @foreach (var project in Model.projects)
+                @for (int i = 0; i < Math.Min(Model.projects.Count, Model.projectDescription.Count); i++)
                 {
-                    <li><a href="@project.Value" class="project-link">@project.Key</a></li>
+                    <li>
+                        <a href="@Model.projects.ElementAt(i).Value"
+                           class="project-link">@Model.projects.ElementAt(i).Key</a>
+                        @Model.projectDescription[i]
+                    </li>
                 }
             </ul>
 

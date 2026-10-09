@@ -1,13 +1,30 @@
 body.portfolio-body {
     background-color: #121212;
 }
+
+body.portfolio-body header .navbar {
+    background-color: #1E1E1F !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+body.portfolio-body header .navbar .navbar-brand,
+body.portfolio-body header .navbar .nav-link {
+    color: #e0e0e0 !important;
+}
+
+body.portfolio-body footer {
+    background-color: #1E1E1F !important;
+    border-top: 1px solid #333 !important;
+    color: #888888 !important;
+}
+
+
 .portfolio-page{
-    background-color: #121212;
     font-size: 1.125rem;
     line-height: 1.5;  
 }
 .grid-container {
-    font-family: Arial, sans-serif;
+    font-family: Poppins;  
     color: #ffffff;
     background-color: #121212;
 }
@@ -19,6 +36,7 @@ body.portfolio-body {
 .portfolio-page .project-link {
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .portfolio-page .project-link:hover {
@@ -140,8 +158,8 @@ body.portfolio-body {
     justify-content: center;
 }
 .portfolio-page .techImage {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 }
 .portfolio-page .left-container hr {
     border: 1px solid #3a3a3a;
