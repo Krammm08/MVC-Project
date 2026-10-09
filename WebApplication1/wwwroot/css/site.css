@@ -1,90 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-    --bg-plum: #2d1724;
-    --bg-card: #edeaeb;
+    --bg-plum: #956781;
+    --bg-light: #edeaeb;
     --border-rose: #b39494;
     --text-accent: #b66794;
     --text-muted: #887272;
+    --text-light: #edeaeb;
 }
 
-/* Base Layout & Typography */
 body {
-    background-color: var(--bg-plum) !important;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--text-muted);
+    background-color: var(--bg-light);
+    color: #212529;
+}
+
+body.portfolio-body {
+    background-color: var(--bg-plum) !important;
+    color: var(--text-light) !important;
+}
+
+/* Default BG
+body {
+    background-color: var(--bg-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #956781;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+} */
 
-h1, h2, h3, h4, .hero-title, .project-title, .interest-title, .interest-tag {
-    font-family: 'Space Grotesk', sans-serif;
-    color: var(--text-accent);
-    font-weight: 700;
-}
-
-/* Section Titles Gradient */
-.section-heading {
+.hero-email {
+    font-family: 'Fira Code', 'Kira', monospace !important;
+    font-weight: 700 !important;
     background: linear-gradient(135deg, #dcaac7 0%, #b66794 50%, #b3a5ca 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.hero-email:hover,
+.hero-email:hover * {
+    background: none !important;
+    -webkit-text-fill-color: #000000 !important;
+    color: #000000 !important;
+    text-decoration: underline;
+}
+
+.section-heading {
+    font-size: 1.25rem;
     border-bottom: 2px solid var(--border-rose);
     padding-bottom: 4px;
+    width: 100%;
 }
 
-/* Containers & Navigation */
-.portfolio-hero, .project-card, .skill-box, .custom-pink-nav {
-    background-color: var(--bg-card) !important;
-    border: 1px solid var(--border-rose) !important;
-    border-radius: 12px;
+.custom-pink-nav, .portfolio-hero, navbar, .navbar {
+    background-color: var(--bg-light) !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid var(--border-rose);
 }
 
-/* Text Dropdowns for Interests (No Cards) */
-.interest-dropdown {
-    border-color: var(--border-rose) !important;
+/* Dropdown */
+details.resume-dropdown {
+    border-bottom: 1px dashed var(--border-rose) !important;
+}
+
+summary {
     cursor: pointer;
 }
 
-    .interest-dropdown summary {
-        list-style: none;
-    }
-
-        .interest-dropdown summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .interest-dropdown summary::after {
-            content: " ▾";
-            color: var(--text-accent);
-            margin-left: 6px;
-        }
-
-    .interest-dropdown[open] summary::after {
-        content: " ▴";
-    }
-
-.interest-desc {
-    color: #edeaeb;
-    font-size: 0.95rem;
+body.portfolio-body footer {
+    border-top: 1px solid rgba(179, 148, 148, 0.4);
 }
 
-/* Header & Footer Styling */
-.nav-link-pink, footer a {
-    color: var(--text-accent) !important;
-    font-weight: 600;
-}
-
-    footer a:hover {
-        color: #86a6c1 !important;
-    }
-
-footer {
-    margin-top: auto !important;
-    color: #edeaeb !important;
-}
-
-    footer, footer .text-muted, footer span {
+    body.portfolio-body footer,
+    body.portfolio-body footer a,
+    body.portfolio-body footer span,
+    body.portfolio-body footer .text-muted {
         color: #edeaeb !important;
     }
+
+        body.portfolio-body footer a:hover {
+            color: #f3cfd2 !important;
+        }
+
+/* Base Footer Styling (Light Background Pages) */
+footer {
+    margin-top: auto !important;
+    text-align: left !important;
+    color: #4a3e3e !important;
+    border-top: 1px solid var(--border-rose);
+    padding-top: 1rem;
+}
+
+    footer a, footer span, footer .text-muted {
+        color: #2d1724 !important; /* Dark plum for clear contrast on #edeaeb */
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: var(--text-accent) !important; /* Distinct hover color */
+            text-decoration: underline;
+        }
